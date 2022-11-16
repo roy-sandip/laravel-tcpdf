@@ -1,0 +1,28 @@
+{
+    "name": "roy-sandip/laravel-tcpdf",
+    "description": "TCPDF for laravel use.",
+    "type": "library",
+    "require": {
+        "tecnickcom/tcpdf": "dev-main"
+    },
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "RoySandip\\LaravelTcpdf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sandip Roy",
+            "email": "sandiproy876@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+            "laravel": {
+                "providers": [
+                    "RoySandip\\LaravelTcpdf\\TCPDFServiceProvider"
+                ]
+            }
+        }
+}
