@@ -29,7 +29,7 @@ TCPDF default configuration can be edited at config/tcpdf.php
 
 Publish Fonts
 ```console
-php artisan vendor:publish --tag=tcpdf-font
+php artisan vendor:publish --tag=tcpdf-fonts
 ```
 
 
