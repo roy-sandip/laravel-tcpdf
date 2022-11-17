@@ -22,7 +22,10 @@
             "laravel": {
                 "providers": [
                     "RoySandip\\LaravelTcpdf\\TCPDFServiceProvider"
-                ]
+                ],
+                "aliases": {
+                    "PDF": "RoySandip\\LaravelTcpdf\\Facades\\PDF"
+                }
             }
         }
 }
