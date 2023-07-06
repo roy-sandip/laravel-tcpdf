@@ -10,6 +10,8 @@ class PDF extends TCPDF
 
     protected $customHeader = null;
     protected $customFooter = null;
+
+    protected $__data = [];
     
 
 	public function __construct($orientation= PDF_PAGE_ORIENTATION, $unit='mm', $format='A4', $unicode=true, $encoding='UTF-8', $diskcache=false, $pdfa=false)
@@ -21,6 +23,17 @@ class PDF extends TCPDF
     public static function template($invoice)
     {
         return new $invoice;
+    }
+
+
+    public function with(array $data)
+    {
+        foreach($data as $key => $value)
+        {
+            $this->__data[$key] = $value;
+        }
+        
+        return $this;
     }
 	
 }

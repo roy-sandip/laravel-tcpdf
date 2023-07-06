@@ -8,11 +8,16 @@ trait Helper
 
     public function view($view, array $data = [])
     {
-        $html = view($view)->with($data)->render();  
+        $html = view($view)->with($this->setData($data))->render();  
         $this->writeHTML($html, true, false, true, false, '');
         return $this;
     }
 
+    protected function setData($data)
+    {
+        $this->with($data);
+        return $this->__data;
+    }
 
 
 
