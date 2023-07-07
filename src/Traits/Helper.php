@@ -9,6 +9,7 @@ trait Helper
     public function view($view, array $data = [])
     {
         $html = view($view)->with($this->setData($data))->render();  
+		$this->html_data .= $html;
         $this->writeHTML($html, true, false, true, false, '');
         return $this;
     }

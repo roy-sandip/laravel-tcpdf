@@ -12,13 +12,19 @@ class PDF extends TCPDF
     protected $customFooter = null;
 
     protected $__data = [];
+
+    protected $html_data = '';
     
 
 	public function __construct($orientation= PDF_PAGE_ORIENTATION, $unit='mm', $format='A4', $unicode=true, $encoding='UTF-8', $diskcache=false, $pdfa=false)
 	{
         parent::__construct($orientation, $unit, $format, $unicode, $encoding, $diskcache, $pdfa);
 	}
-
+	
+	public function toHTML()
+    {
+        return  $this->html_data;
+    }
  
     public static function template($invoice)
     {
