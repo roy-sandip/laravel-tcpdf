@@ -21,8 +21,12 @@ class PDF extends TCPDF
         parent::__construct($orientation, $unit, $format, $unicode, $encoding, $diskcache, $pdfa);
 	}
 	
-	public function toHTML()
+	public function toHTML($print = false)
     {
+		if($print)
+        {
+            $this->html_data .= '<script>window.addEventListener("load", window.print());</script>';
+        }
         return  $this->html_data;
     }
  
